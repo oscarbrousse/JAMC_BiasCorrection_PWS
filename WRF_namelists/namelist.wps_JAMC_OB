@@ -1,0 +1,47 @@
+&share
+ wrf_core = 'ARW',
+ max_dom = 3,
+ start_date = '2018-05-25_00:00:00','2018-05-25_00:00:00','2018-05-25_00:00:00',
+ end_date   = '2018-09-01_00:00:00','2018-09-01_00:00:00','2018-09-01_00:00:00',
+
+ !!! Only for invariant constants !!! 
+ !start_date = '1989-01-01_12:00:00','1989-01-01_12:00:00','1989-01-01_12:00:00',
+ !end_date = '1989-01-01_12:00:00','1989-01-01_12:00:00','1989-01-01_12:00:00',
+ !!!
+
+ interval_seconds = 21600
+ io_form_geogrid = 2,
+ !debug_level = 1,
+/
+
+&geogrid
+ parent_id         =  1,    1,    2,
+ parent_grid_ratio =  1,    4,    3,
+ i_parent_start    =  1,    75,   61,
+ j_parent_start    =  1,    75,   90,
+ e_we              =  200,  253,  211,
+ e_sn              =  200,  241,  181,
+ geog_data_res     = 'modis_15s_lake+2m','modis_15s_lake+30s','modis_15s_lake+30s',
+ dx = 12000, 
+ dy = 12000, 
+ map_proj = 'lambert'
+ ref_lat = 51,
+ ref_lon = 0,
+ stand_lon = 0,
+ truelat1 = 45,
+ truelat2 = 58
+ geog_data_path = ''
+/
+ 
+&ungrib
+ out_format = 'WPS',
+ prefix = 'SFC'
+ !prefix = 'PL'
+ !prefix = 'INV' !!! Just have to run it once with the date specified above
+/
+
+&metgrid
+ fg_name = 'SFC', 'PL'
+ io_form_metgrid = 2,
+ !constants_name = 'INV:1989-01-01_12' 
+/
