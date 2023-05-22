@@ -1,5 +1,6 @@
 # JAMC_BiasCorrection_PWS
-Repository for the scripts used in the manuscript by Brousse et al. study submitted to JAMC
+Repository for the scripts used in the manuscript by Brousse et al. study submitted to JAMC.
+The _WRF_namelists_ directory provides the necessary WPS and WRF namelists. It also contains all look-up tables used in the WRF run; in particular, the _URBPARM_LCZ.TBL_.
 
 The README will be updated upon acceptance of the manuscript
 
