@@ -348,8 +348,8 @@ fig.savefig(savedir + "Domain_nesting_CWS-AWS_W2W.png", dpi=300)
 # col = 2; row = 5
 col = 2; row = 3
 proj = ccrs.PlateCarree()
-fig, ax = plt.subplots(row, col, figsize = (12,3.5*row), subplot_kw=dict(projection=proj),
-                       constrained_layout=True)
+fig, ax = plt.subplots(row, col, figsize = (12,3.5*row), subplot_kw=dict(projection=proj))
+fig.subplots_adjust(left=0.10, bottom=0.13, right=0.90, top=0.85)
 ax = ax.flatten()
 
 # list_stat = ["RMSE [°C]", "MAE [°C]", "MB [°C]", "Pearson r²", "Spearman r"]
@@ -462,8 +462,8 @@ fig.savefig(savedir + 'Eval_WRF_Netatmo_2018-06-01_2018-08-31.pdf')
 
 col = 2; row = 2
 proj = ccrs.PlateCarree()
-fig, ax = plt.subplots(row, col, figsize = (12,3.5*row), subplot_kw=dict(projection=proj),
-                       constrained_layout=True)
+fig, ax = plt.subplots(row, col, figsize = (12,3.5*row), subplot_kw=dict(projection=proj))
+fig.subplots_adjust(left=0.10, bottom=0.13, right=0.90, top=0.85)
 ax = ax.flatten()
 
 list_stat = ["MAE [°C]", "Spearman r"]
